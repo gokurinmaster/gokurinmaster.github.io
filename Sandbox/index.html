@@ -10,6 +10,7 @@
     <header>
         <h1>GitHub Pages へようこそ！</h1>
         <p>これは GitHub Pages で公開するシンプルな Web サイトの例です。</p>
+        <button onclick="toggleDarkMode()">🌙 ダークモード切替</button>
     </header>
 
     <nav>
@@ -26,10 +27,21 @@
             <p>簡単に Web サイトを公開できます！</p>
             <button onclick="showMessage()">クリックしてみて！</button>
         </section>
+
+        <section>
+            <h2>📅 現在の日時</h2>
+            <p id="datetime">読み込み中...</p>
+        </section>
+
+        <section>
+            <h2>🎯 今日の運勢 (おみくじ)</h2>
+            <button onclick="drawFortune()">おみくじを引く</button>
+            <p id="fortune-result">結果はここに表示されます</p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 GitHub Pages Sample. All rights reserved.</p>
+        <p>&copy; 2025 @gokurinmaster</p>
     </footer>
 
     <script src="script.js"></script>
