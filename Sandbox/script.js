@@ -1,3 +1,3 @@
 function showMessage() {
-    alert("‚±‚ñ‚É‚¿‚ÍIƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚Ü‚µ‚½‚ËI");
+    alert("ã“ã‚“ã«ã¡ã¯ï¼ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¾ã—ãŸã­ï¼");
 }
