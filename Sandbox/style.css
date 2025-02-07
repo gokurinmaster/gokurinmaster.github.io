@@ -72,3 +72,36 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* 🎮 モグラたたきゲームのスタイル */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #8B4513;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mole {
+    width: 80px;
+    height: 80px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -80px;
+    left: 10px;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.mole.show {
+    bottom: 10px;
+}

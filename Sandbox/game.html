@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モグラたたきゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎮 モグラたたきゲーム</h1>
+        <p>30秒以内にできるだけ多くのモグラを叩こう！</p>
+        <a href="index.html">🏠 ホームへ戻る</a>
+    </header>
+
+    <main>
+        <h2>スコア: <span id="score">0</span></h2>
+        <h3>残り時間: <span id="time">30</span> 秒</h3>
+        <button onclick="startGame()">ゲーム開始</button>
+
+        <div class="game-container">
+            <div class="hole" onclick="hitMole(0)"><div class="mole"></div></div>
+            <div class="hole" onclick="hitMole(1)"><div class="mole"></div></div>
+            <div class="hole" onclick="hitMole(2)"><div class="mole"></div></div>
+            <div class="hole" onclick="hitMole(3)"><div class="mole"></div></div>
+            <div class="hole" onclick="hitMole(4)"><div class="mole"></div></div>
+            <div class="hole" onclick="hitMole(5)"><div class="mole"></div></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 @gokurinmaster</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
