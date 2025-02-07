@@ -3,6 +3,7 @@ let timeLeft = 30;
 let timer;
 let moleInterval;
 let activeMole = -1;
+const bgm = document.getElementById("bgm"); // BGM要素を取得
 
 // 🎮 ゲーム開始
 function startGame() {
@@ -14,12 +15,18 @@ function startGame() {
     clearInterval(timer);
     clearInterval(moleInterval);
 
+    // 🔊 BGM再生（すでに再生中ならリセット）
+    bgm.currentTime = 0;
+    bgm.volume = 0.5; // 音量調整（0.0〜1.0）
+    bgm.play();
+
     timer = setInterval(() => {
         timeLeft--;
         document.getElementById("time").textContent = timeLeft;
         if (timeLeft === 0) {
             clearInterval(timer);
             clearInterval(moleInterval);
+            bgm.pause(); // 🔇 BGM停止
             alert(`ゲーム終了！スコア: ${score}`);
         }
     }, 1000);
