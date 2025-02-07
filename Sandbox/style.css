@@ -76,19 +76,24 @@ footer {
 /* 🎮 モグラたたきゲームのスタイル */
 .game-container {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 120px); /* 3列のグリッド */
+    grid-gap: 15px;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    padding: 20px;
 }
 
 .hole {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: #8B4513;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .mole {
@@ -98,7 +103,6 @@ footer {
     border-radius: 50%;
     position: absolute;
     bottom: -80px;
-    left: 10px;
     transition: bottom 0.3s ease-in-out;
 }
 

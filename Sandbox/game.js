@@ -29,20 +29,26 @@ function startGame() {
 
 // 🕳 モグラをランダムに表示
 function showMole() {
+    const moles = document.querySelectorAll(".mole");
+
+    // 前のモグラを隠す
     if (activeMole !== -1) {
-        document.getElementsByClassName("mole")[activeMole].classList.remove("show");
+        moles[activeMole].classList.remove("show");
     }
-    
-    activeMole = Math.floor(Math.random() * 6);
-    document.getElementsByClassName("mole")[activeMole].classList.add("show");
+
+    // 新しいモグラをランダムに出現
+    activeMole = Math.floor(Math.random() * moles.length);
+    moles[activeMole].classList.add("show");
 }
 
 // 🔨 モグラを叩いたときの処理
-function hitMole(index) {
-    if (index === activeMole) {
-        score++;
-        document.getElementById("score").textContent = score;
-        document.getElementsByClassName("mole")[activeMole].classList.remove("show");
-        activeMole = -1;
-    }
-}
+document.querySelectorAll(".hole").forEach((hole, index) => {
+    hole.addEventListener("click", () => {
+        if (index === activeMole) {
+            score++;
+            document.getElementById("score").textContent = score;
+            document.querySelectorAll(".mole")[activeMole].classList.remove("show");
+            activeMole = -1;
+        }
+    });
+});
