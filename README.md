@@ -1,0 +1,1 @@
+# gokurinmaster.github.io
